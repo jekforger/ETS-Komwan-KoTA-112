@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\DataImport;
 
-class UploadController extends Controller
+class ExcelController extends Controller
 {
-    public function showForm()
-{
-    return view('upload');
-}
+    public function index()
+    {
+        return view('upload');
+    }
 
     public function import(Request $request)
     {

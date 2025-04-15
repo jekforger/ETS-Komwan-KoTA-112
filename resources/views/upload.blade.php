@@ -38,7 +38,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('upload.submit') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="file" class="form-label">Pilih File Excel</label>
@@ -51,8 +51,8 @@
                 </form>
 
                 @if(isset($data) && count($data) > 0)
-                    <div class="preview-table">
-                        <h5 class="mt-4 mb-3">Preview Data</h5>
+                <div class="preview-table">
+                    <h5 class="mt-4 mb-3">Preview Data</h5>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered">
                                 <thead class="table-dark">

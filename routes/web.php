@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExcelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('uploaddata', function () {
-    return view('upload');
-});
-Route::get('upload', [UploadController::class, 'showForm'])->name('upload.form');
-Route::post('upload', [UploadController::class, 'import'])->name('upload.submit');
+// Route GET untuk menampilkan form
+Route::get('/upload', [ExcelController::class, 'index'])->name('upload');
+
+// Route POST untuk proses upload
+Route::post('/upload', [ExcelController::class, 'import'])->name('import');

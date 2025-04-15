@@ -9,7 +9,7 @@ class DataMahasiswa extends Model
 {
     use HasFactory;
 
-    protected $table = 'data_mahasiswas'; // Sesuaikan dengan nama tabel
+    protected $table = 'data_mahasiswa';
     
     protected $fillable = [
         'name',
