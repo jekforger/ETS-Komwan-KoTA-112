@@ -10,16 +10,17 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('data_mahasiswas', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->integer('nim');
-            $table->string('jurusan');
-            $table->string('prodi');
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('data_mahasiswas', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        // $table->integer('nim'); // Ganti baris ini
+        $table->string('nim')->unique(); // Menjadi string, tambahkan unique jika perlu
+        $table->string('jurusan');
+        $table->string('prodi');
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
